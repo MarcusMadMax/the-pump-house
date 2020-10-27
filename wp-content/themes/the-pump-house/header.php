@@ -37,7 +37,7 @@
   <header id="header">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo mr-auto"><img src="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/the-pump-house-logo.png" alt=""></a>
+      <a href="index.html" class="logo mr-auto"><img src="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/the-pump-house-logo.svg" alt=""></a>
       <!-- Uncomment below if you prefer to use a text logo -->
       <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 

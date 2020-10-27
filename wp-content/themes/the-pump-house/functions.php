@@ -5,6 +5,13 @@
    }
    add_action( 'init', 'register_resource' );
 
+   $args = array(
+    'public'    => true,
+    'label'     => 'Hero',
+    'menu_icon' => 'dashicons-universal-access-alt',
+);
+register_post_type( 'hero', $args );
+
     function add_class_to_li( $classes, $item, $args ) {
 
         $classes[] = 'nav-item';
