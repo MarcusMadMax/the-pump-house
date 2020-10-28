@@ -3,14 +3,32 @@
     register_nav_menu('main-menu',__( 'Main menu' )
     );
    }
-   add_action( 'init', 'register_resource' );
 
-   $args = array(
-    'public'    => true,
-    'label'     => 'Hero',
-    'menu_icon' => 'dashicons-universal-access-alt',
-);
-register_post_type( 'hero', $args );
+    $args = array(
+        'public'    => true,
+        'label'     => 'Hero',
+        'menu_icon' => 'dashicons-universal-access-alt',
+    );
+    register_post_type( 'hero', $args );
+
+    add_action( 'init', 'register_resource' );
+
+    $args = array(
+        'public'    => true,
+        'label'     => 'Shows',
+        'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+    );
+    register_post_type( 'show', $args );
+
+        //Custom taxonomy
+        $args = array(
+            'label'        => 'Type',
+            'public'       => true,
+            'rewrite'      => false,
+            'hierarchical' => true,
+            'show_in_nav_menus' => true
+        );
+        register_taxonomy( 'type', 'show', $args );
 
     function add_class_to_li( $classes, $item, $args ) {
 

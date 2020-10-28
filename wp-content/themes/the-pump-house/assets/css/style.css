@@ -457,7 +457,7 @@ section {
   width: 80vw;
   height: .01em;
   background-color: #b71e1e;
-  margin: 1em 0;
+  margin: 3em 0;
   left: 50%;
   transform: translateX(-50%);
 }
