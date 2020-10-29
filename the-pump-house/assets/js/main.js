@@ -1,9 +1,3 @@
-/**
-* Template Name: Imperial - v3.1.0
-* Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -37,7 +31,7 @@
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 1;
-  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+  $(document).on('click','.btn-get-started .nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
@@ -117,13 +111,29 @@
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
       $('.mobile-nav-overly').toggle();
+      navOverlyAnime.play();
+      navAnime.play();
     });
 
-    $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
-      e.preventDefault();
-      $(this).next().slideToggle(300);
-      $(this).parent().toggleClass('active');
+    var navAnime = anime({
+      targets: '.mobile-nav li',
+      translateX: [-150,0],
+      delay: anime.stagger(400, {start: 500},{easing: 'linear'}),
+      autoplay:false,
     });
+
+    var navOverlyAnime = anime({
+      targets: '.mobile-nav-overly',
+      translateX: [-500,0],
+      delay: 500,
+      autoplay:false,
+    });
+
+    // $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
+    //   e.preventDefault();
+    //   $(this).next().slideToggle(300);
+    //   $(this).parent().toggleClass('active');    
+    // });
 
     $(document).click(function(e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");

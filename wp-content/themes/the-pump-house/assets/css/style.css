@@ -676,7 +676,7 @@ section {
 }
 
 #portfolio .portfolio-item .portfolio-info .preview-link:hover, #portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #b71e1e;
+  color: #999;
 }
 
 #portfolio .portfolio-item .portfolio-info .details-link {

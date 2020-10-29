@@ -10,8 +10,10 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo get_template_directory_uri()?>/assets/img/favicon.png" rel="icon">
-  <link href="<?php echo get_template_directory_uri()?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/icons/favicon-16x16.png">
+  <link rel="manifest" href="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/icons/site.webmanifest">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"

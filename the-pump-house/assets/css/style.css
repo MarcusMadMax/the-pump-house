@@ -313,6 +313,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   cursor: pointer;
   text-align: right;
+  color: #fff;
 }
 
 .mobile-nav-toggle i {
@@ -322,17 +323,13 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav {
   position: fixed;
   top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
+  left: 0;
+  width: 100%;
   z-index: 9999;
   overflow-y: auto;
-  background: #fff;
-  transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
-  border-radius: 10px;
-  padding: 10px 0;
+  overflow: hidden;
 }
 
 .mobile-nav * {
@@ -342,21 +339,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a {
+  background-color: #b71e1e;
+  border-radius: .25em;
   display: block;
   position: relative;
   color: #333333;
   padding: 10px 20px;
-  font-weight: 500;
+  font-weight: 700;
+  margin: 1em;
+  width: 8em;
   outline: none;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #b71e1e;
+  color: #fff;
   text-decoration: none;
 }
 
 .mobile-nav .drop-down > a:after {
-  content: "\ea99";
+  content: "Menu";
   font-family: IcoFont;
   padding-left: 10px;
   position: absolute;
@@ -390,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(26, 26, 26, 0.6);
   overflow: hidden;
   display: none;
-  transition: ease-in-out 0.2s;
+  /* transition: ease-in-out 0.2s; */
 }
 
 .mobile-nav-active {
@@ -1008,6 +1009,23 @@ section {
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   z-index: 2;
+}
+
+.portfolio-info button{
+  background-color: #b71e1e;
+  border: 1px solid #b71e1e;
+  border-radius: .25em;
+  color: #fff;
+  margin: 2em 0 0 0;
+  padding: .5em;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.4s;
+}
+
+.portfolio-info button:hover{
+  color: #b71e1e;
+  background-color: transparent;
+  border: 1px solid #b71e1e;
 }
 
 .portfolio-details .portfolio-info h3 {

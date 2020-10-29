@@ -15,7 +15,7 @@
                 </div>
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
-                    <li data-filter="all" class="filter-active">All</li>
+                    <li data-filter="*" class="filter-active">All</li>
 
                     <?php
                         $terms = get_terms('type',array('hide_empty'=>false));
@@ -31,7 +31,7 @@
         <div class="row portfolio-container">
 
             <?php
-                $args = array('post_type' => 'Shows');
+                $args = array('post_type' => 'show');
                 // The Query
                 $the_query = new WP_Query( $args );
 
