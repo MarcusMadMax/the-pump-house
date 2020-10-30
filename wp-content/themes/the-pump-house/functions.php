@@ -3,6 +3,7 @@
     register_nav_menu('main-menu',__( 'Main menu' )
     );
    }
+add_action( 'init', 'register_resource' );
 
     $args = array(
         'public'    => true,
@@ -11,8 +12,6 @@
     );
     register_post_type( 'hero', $args );
 
-    add_action( 'init', 'register_resource' );
-
     $args = array(
         'public'    => true,
         'label'     => 'Shows',
@@ -20,15 +19,33 @@
     );
     register_post_type( 'show', $args );
 
-        //Custom taxonomy
-        $args = array(
-            'label'        => 'Type',
-            'public'       => true,
-            'rewrite'      => false,
-            'hierarchical' => true,
-            'show_in_nav_menus' => true
-        );
-        register_taxonomy( 'type', 'show', $args );
+    //Custom taxonomy
+    $args = array(
+        'label'        => 'Type',
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true,
+        'show_in_nav_menus' => true
+    );
+    register_taxonomy( 'type', 'show', $args );
+
+    //register section
+    $args = array(
+        'public'    => true,
+        'label'     => 'Sections',
+        'menu_icon' => 'dashicons-book',
+    );
+    register_post_type( 'section', $args );
+
+    //Custom taxonomy
+    $args = array(
+        'label'        => 'Form',
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true,
+        'show_in_nav_menus' => true
+    );
+    register_taxonomy( 'form', 'section', $args );
 
     function add_class_to_li( $classes, $item, $args ) {
 

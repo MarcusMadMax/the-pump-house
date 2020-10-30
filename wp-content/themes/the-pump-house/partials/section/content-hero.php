@@ -1,3 +1,4 @@
+<!-- ======= Hero Section ======= -->
 <section id="hero" style="background-image: url(<?php the_field('hero_background_image')?>);">
     <div class="hero-container">
         <div class="wow fadeIn">
@@ -22,10 +23,13 @@
                         </text>
                     </svg>
                 </a>
-                <div class="info-box">
-                    <p><?php the_field('hero_info_box_first_line')?></p>
-                    <h2><?php the_field('hero_info_box_first_title')?></h2>
-                    <h4><?php the_field('hero_info_box_second_title')?></h4>
-                    <p><?php the_field('hero_info_box_date')?></p>
-                </div>
+            </div>   
+            <div class="info-box">
+                <p><?php the_field('hero_info_box_first_line')?></p>
+                <h2><?php the_field('hero_info_box_first_title')?></h2>
+                <h4><?php the_field('hero_info_box_second_title')?></h4>
+                <p><?php the_field('hero_info_box_date')?></p>
             </div>
+        </div>
+    </div>
+</section><!-- End Hero Section -->
