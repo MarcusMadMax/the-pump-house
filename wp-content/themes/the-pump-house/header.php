@@ -44,13 +44,6 @@
       <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
 
       <nav class="nav-menu d-none d-lg-block">
-        <!-- <ul>
-          <li class="active"><a href="#hero">Home</a></li>
-          <li><a href="#about">What's on</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="contact.html">Contact</a></li>
-
-        </ul> -->
 
         <?php wp_nav_menu( array( 
               'theme_location' => 'main-menu',

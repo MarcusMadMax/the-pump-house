@@ -76,8 +76,8 @@
   <script src="<?php echo get_template_directory_uri()?>/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?php echo get_template_directory_uri()?>/assets/js/main.js"></script>
   <script src="<?php echo get_template_directory_uri()?>/assets/js/anime.js"></script>
+  <script src="<?php echo get_template_directory_uri()?>/assets/js/main.js"></script>
 
   <?php wp_footer()?>
 </body>
