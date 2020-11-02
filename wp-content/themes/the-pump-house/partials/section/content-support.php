@@ -18,7 +18,7 @@
                 // The Loop
                 while ( $the_query->have_posts() ) {
                     $the_query->the_post();
-                    get_template_part('partials/page/content', 'supportsection');
+                    get_template_part('partials/page/content', 'support');
                 }
 
                 /* Restore original Post Data */

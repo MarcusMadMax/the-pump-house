@@ -1,6 +1,4 @@
 <!-- ======= About Section ======= -->
-<?php get_header()?>
-
 <section id="about">
     <div class="container wow fadeInUp">
     <div class="row">

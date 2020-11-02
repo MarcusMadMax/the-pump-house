@@ -10,17 +10,17 @@
         'label'     => 'Support',
         'menu_icon' => 'dashicons-buddicons-buddypress-logo',
     );
-    register_post_type( 'supportsection', $args );
+    register_post_type( 'support', $args );
 
     // //Custom taxonomy
     $args = array(
-        'label'        => 'thing',
+        'label'        => 'tag',
         'public'       => true,
         'rewrite'      => false,
         'hierarchical' => true,
         'show_in_nav_menus' => true
     );
-    register_taxonomy( 'thing', 'supportsection', $args );
+    register_taxonomy( 'tag', 'support', $args );
 
     $args = array(
         'public'    => true,
