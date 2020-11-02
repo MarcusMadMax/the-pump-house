@@ -1,3 +1,4 @@
+<?php get_header()?>
 <!-- ======= Breadcrumbs ======= -->
 <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
@@ -33,4 +34,3 @@
     <h2>About</h2>
     <p><?php the_content()?></p>
 </div>
-

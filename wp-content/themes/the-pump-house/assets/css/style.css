@@ -56,6 +56,13 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.5s;
 }
 
+hr{
+  width: 80vw;
+  height: .01em;
+  background-color: #b71e1e;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
@@ -154,18 +161,40 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #0d0d0d;
+  z-index: 997;
+  padding: 15px 0;
+  opacity: 0;
+}
+
+.header-slide-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+  transition: ease-in-out 3s;
+  z-index: 997;
+  padding: 15px 0;
+  opacity: 1;
+}
+
+/* #header {
   background: #0d0d0d;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-}
+} */
 
 .fixed {
   position: fixed;
   top:0;
   left:0;
-  width: 100%;
  }
 
 #header .logo {
@@ -448,19 +477,7 @@ section {
 --------------------------------*/
 #about {
   background: #fff;
-  /* padding-top: 12em; */
-  margin-bottom: 4em;
-}
-
-#about .about-container:after{
-  content: '';
-  position: absolute;
-  width: 80vw;
-  height: .01em;
-  background-color: #b71e1e;
-  margin: 3em 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 4em 0;
 }
 
 #about .about-img {
@@ -471,10 +488,18 @@ section {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  #about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7em 0;
+  }
+
   #about .about-img {
     height: auto;
   }
+
   #about .about-img img {
     margin-left: 0;
     padding-bottom: 30px;
@@ -548,6 +573,15 @@ section {
 #services .service-description {
   margin-left: 80px;
   line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  #services{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7em 0;
+  }
 }
 
 /* Subscribe Section

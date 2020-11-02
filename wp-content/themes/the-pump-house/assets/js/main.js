@@ -25,19 +25,28 @@
 
   // Stick the header at top on scroll
   // $("#header").sticky({
-  //   topSpacing: 0,
+  //   topSpacing: ('100%'),
   //   zIndex: '50'
   // });
 
-  var stickyOffset = $('#header').offset().top;
+  var iMenuOffset = $('#header').offset().top
 
-  $(window).scroll(function () {
-    var sticky = $('#header'),
-      scroll = $(window).scrollTop();
 
-    if (scroll >= stickyOffset) sticky.addClass('fixed');
-    else sticky.removeClass('fixed');
-  });
+    //sticky header----------------------------------------------------
+    $(document).on('scroll',function(){
+      var iScrollTop = $(document).scrollTop()
+      if(iMenuOffset < iScrollTop){
+          $('#header').addClass('fixed')
+      }else{
+          $('#header').removeClass('fixed')
+      }
+
+      if(iScrollTop > 200){
+          $('#header').removeClass('header').addClass('header-slide-down')
+      }else{
+          $('#header').removeClass('header-slide-down').addClass('header')
+      }
+    })
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   // var scrolltoOffset = $('#header').outerHeight() - 1;
@@ -73,40 +82,40 @@
   // });
 
   // Activate smooth scroll on page load with hash links in the url
-  // $(document).ready(function () {
-  //   if (window.location.hash) {
-  //     var initial_nav = window.location.hash;
-  //     if ($(initial_nav).length) {
-  //       var scrollto = $(initial_nav).offset().top - scrolltoOffset;
-  //       $('html, body').animate({
-  //         scrollTop: scrollto
-  //       }, 1500, 'easeInOutExpo');
-  //     }
-  //   }
-  // });
+  $(document).ready(function () {
+    if (window.location.hash) {
+      var initial_nav = window.location.hash;
+      if ($(initial_nav).length) {
+        var scrollto = $(initial_nav).offset().top - scrolltoOffset;
+        $('html, body').animate({
+          scrollTop: scrollto
+        }, 1500, 'easeInOutExpo');
+      }
+    }
+  });
 
   // Navigation active state on scroll
-  // var nav_sections = $('section');
-  // var main_nav = $('.nav-menu, .mobile-nav');
+  var nav_sections = $('section');
+  var main_nav = $('.nav-menu, .mobile-nav');
 
-  // $(window).on('scroll', function () {
-  //   var cur_pos = $(this).scrollTop() + 200;
+  $(window).on('scroll', function () {
+    var cur_pos = $(this).scrollTop() + 200;
 
-  //   nav_sections.each(function () {
-  //     var top = $(this).offset().top,
-  //       bottom = top + $(this).outerHeight();
+    nav_sections.each(function () {
+      var top = $(this).offset().top,
+        bottom = top + $(this).outerHeight();
 
-  //     if (cur_pos >= top && cur_pos <= bottom) {
-  //       if (cur_pos <= bottom) {
-  //         main_nav.find('li').removeClass('active');
-  //       }
-  //       main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
-  //     }
-  //     if (cur_pos < 300) {
-  //       $(".nav-menu ul:first li:first").addClass('active');
-  //     }
-  //   });
-  // });
+      if (cur_pos >= top && cur_pos <= bottom) {
+        if (cur_pos <= bottom) {
+          main_nav.find('li').removeClass('active');
+        }
+        main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
+      }
+      if (cur_pos < 300) {
+        $(".nav-menu ul:first li:first").addClass('active');
+      }
+    });
+  });
 
   // Mobile Navigation
   if ($('.nav-menu').length) {

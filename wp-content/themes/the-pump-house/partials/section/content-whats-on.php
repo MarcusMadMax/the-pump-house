@@ -1,13 +1,6 @@
 <!-- ======= What's on Section ======= -->
 <section id="portfolio">
     <div class="container wow fadeInUp">
-        <?php
-            while(have_posts()){
-                the_post();
-                get_template_part('partials/content','index');
-            }//end while
-        ?>
-
         <div class="row">
                 <div class='mx-auto mb-3'>
                     <h3 class="section-title">What's on</h3>

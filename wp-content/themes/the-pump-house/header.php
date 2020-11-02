@@ -36,13 +36,9 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header" class='header'>
     <div class="container d-flex align-items-center">
-
-      <a href="index.html" class="logo mr-auto"><img src="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/the-pump-house-logo.svg" alt=""></a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
-
+      <a href="http://localhost/the-pump-house/" class="logo mr-auto"><img src="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/the-pump-house-logo.svg" alt=""></a>
       <nav class="nav-menu d-none d-lg-block">
 
         <?php wp_nav_menu( array( 
@@ -52,6 +48,5 @@
         ?>
 
       </nav><!-- .nav-menu -->
-
     </div>
   </header><!-- End Header -->

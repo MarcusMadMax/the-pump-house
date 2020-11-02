@@ -3,14 +3,14 @@
     register_nav_menu('main-menu',__( 'Main menu' )
     );
    }
-add_action( 'init', 'register_resource' );
+    add_action( 'init', 'register_resource' );
 
     $args = array(
         'public'    => true,
-        'label'     => 'Hero',
-        'menu_icon' => 'dashicons-universal-access-alt',
+        'label'     => 'Support',
+        'menu_icon' => 'dashicons-buddicons-buddypress-logo',
     );
-    register_post_type( 'hero', $args );
+    register_post_type( 'supportsection', $args );
 
     $args = array(
         'public'    => true,
