@@ -178,7 +178,7 @@ hr{
   left: 0;
   width: 100vw;
   background: rgba(0, 0, 0, 0.8);
-  transition: ease-in-out 3s;
+  transition: ease-in-out 1s;
   z-index: 997;
   padding: 15px 0;
   opacity: 1;

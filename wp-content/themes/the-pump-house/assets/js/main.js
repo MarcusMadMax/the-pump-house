@@ -41,7 +41,7 @@
           $('#header').removeClass('fixed')
       }
 
-      if(iScrollTop > 200){
+      if(iScrollTop > 0){
           $('#header').removeClass('header').addClass('header-slide-down')
       }else{
           $('#header').removeClass('header-slide-down').addClass('header')

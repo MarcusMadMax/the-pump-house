@@ -1,4 +1,3 @@
-<?php get_header()?>
 <!-- ======= Breadcrumbs ======= -->
 <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
