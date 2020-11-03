@@ -3,7 +3,7 @@
     <div class="container wow fadeInUp">
     <div class="row">
         <div class="col-md-12">
-        <h3 class="section-title"><?php the_field('header')?></h3>
+        <h3 class="section-title">Support</h3>
         <div class="section-title-divider"></div>
         <p class="section-description"><?php the_field('sub_header')?></p>
         </div>
@@ -18,7 +18,7 @@
                 // The Loop
                 while ( $the_query->have_posts() ) {
                     $the_query->the_post();
-                    get_template_part('partials/page/content', 'support');
+                    get_template_part('partials/page/content', 'supportsection');
                 }
 
                 /* Restore original Post Data */

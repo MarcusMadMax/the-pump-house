@@ -6,7 +6,7 @@
                 <img class="col-12 col-md-6" src="<?php echo get_template_directory_uri()?>/assets/img/the-pump-house/the-pump-house-logo.svg" alt="The Pumphouse logo">
             </div>
             <h1><?php the_field('hero_header')?></h1>
-            <h2>The PumpHouse Theatre is a registered charity. Funding received from individuals, businesses and grants ensures we can offer a safe venue at an affordable rate for the local community.</h2>
+            <h2>The PumpHouse Theatre is a registered charity.</h2>
             <div class="actions">
                 <a href="#services" class="btn-get-started">
                     <svg width="150" height="150" class="chevron">
